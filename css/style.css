@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f0e8;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background: #1a1209;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.hero {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: #1a1209;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background: #c4512a;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
