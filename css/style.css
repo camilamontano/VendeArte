@@ -49,3 +49,87 @@ nav ul li a {
   font-size: 1rem;
   cursor: pointer;
 }
+.artistas{
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.artistas h2 {
+    font-size: 2rem;
+    color: #1a1209;
+    margin-bottom: 2rem;
+}
+.cards {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+}
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card h3{
+    color:#c4512a;
+    margin-bottom: 0.6rem;
+}
+.card p{
+    color: #555;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+}
+.card button {
+    background: #c4512a;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    
+}
+
+.formulario {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.formulario h2 {
+    font-size: 2rem;
+    color: #1a1209;
+    margin-bottom: 0.5rem;
+}
+.formulario p {
+    color: #555;
+    margin-bottom: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1rem;
+    align-items: center;
+
+}
+
+form input, form textarea{
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    
+}
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background: #c4512a;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
