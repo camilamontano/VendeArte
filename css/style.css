@@ -133,3 +133,15 @@ form button {
     cursor: pointer;
     margin-top: 1rem;
 }
+.mensaje {
+    margin-top: 1rem;
+    color: #080808;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #c4512a;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: #c4512a  0px 4px 8px rgba(0,0,0,0.1);
+    
+
+}
