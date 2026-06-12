@@ -9,6 +9,7 @@
 <body>
     <nav>
         <ul>
+            <li><a href="registro-artista.php">Soy artista</a></li>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="artistas.html">Artistas</a></li>
             <li><a href="obras.html">Obras</a></li>

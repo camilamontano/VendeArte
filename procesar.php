@@ -13,7 +13,7 @@ if (!$conexion) {
 }
 
 
-$sql = "INSERT INTO contacto (nombre, correo, mensaje) VALUES ('$nombre', '$email', '$mensaje')";
+$sql = "INSERT INTO contacto  (nombre, correo, mensaje) VALUES ('$nombre', '$email', '$mensaje')";
 
 if (mysqli_query($conexion, $sql)) {
     echo "Gracias " . $nombre . ", tu mensaje fue guardado correctamente.";
