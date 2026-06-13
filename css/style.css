@@ -1,8 +1,22 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f9f6f1;
+  color: #1a1209;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+
 
 body {
   background: #f5f0e8;
@@ -25,30 +39,57 @@ nav ul li a {
   text-decoration: none;
 }
 .hero {
+  background: #1a1209;
+  color: #ffffff;
   padding: 5rem 2rem;
-  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero h2 {
-  font-size: 3rem;
-  color: #1a1209;
-  margin-bottom: 1rem;
+.hero h1 {
+  font-size: 4rem;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
+.hero em {
+  color: #c4512a;
 }
 
-.hero button {
+.hero .eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+}
+.hero-botones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.btn-primary {
   background: #c4512a;
   color: white;
   padding: 1rem 2rem;
   border: none;
-  font-size: 1rem;
-  cursor: pointer;
+  text-decoration: none;
 }
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+ 
+}
+.hero-desc {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  max-width: 500px;
+}
+
 .artistas{
     padding: 4rem 2rem;
     text-align: center;
@@ -64,29 +105,19 @@ nav ul li a {
     justify-content: center;
 }
 .card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 250px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.card h3{
-    color:#c4512a;
-    margin-bottom: 0.6rem;
-}
-.card p{
-    color: #555;
-    margin-bottom: 0.6rem;
-    font-size: 0.9rem;
-}
-.card button {
-    background: #c4512a;
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(60px);
 }
 
 .formulario {

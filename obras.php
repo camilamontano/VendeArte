@@ -14,8 +14,11 @@ $resultado = mysqli_query($conexion, $sql);
 <body>
 
 <h2>Obras registradas</h2>
-
+<div>
+      <a href="registro-obra.php">+ Registrar mi obra</a>
+    </div>
   <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
+  
     <div class="card-obra">
       <h3><?php echo $fila['titulo']; ?></h3>
       <p><?php echo $fila['categoria']; ?> · <?php echo $fila['precio']; ?></p>
