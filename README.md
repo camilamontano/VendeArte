@@ -102,5 +102,5 @@ Archivos nuevos:
 Video de demostración: https://youtu.be/qBvk0AdZRPM
 
 # Desarrolladora
-Camila Montaño — SENA ADSO 2025
+Camila Montaño — SENA ADSO 2026
 
