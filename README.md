@@ -64,3 +64,43 @@ MySQL
 Base de datos: vendearte
 Tabla: contacto
 (id, nombre, correo, mensaje)
+
+# Avance 2 — Funcionalidades implementadas
+- CRUD completo de artistas (crear, ver, editar, eliminar)
+- CRUD completo de obras (crear, ver, editar, eliminar)
+- Panel de administración de mensajes
+- Rediseño visual con tipografía Playfair Display
+- Animaciones al hacer scroll con JavaScript
+
+# Funcionalidades planificadas
+- Login y registro de usuarios
+- Subida de imágenes al portafolio
+- Sistema de encargos completo
+- Pasarela de pagos local
+- Aplicación móvil
+
+# Arquitectura actualizada — Avance 2
+Tablas agregadas:
+- `artistas` (id, nombre, especialidad, ciudad, correo, descripcion)
+- `obras` (id, titulo, categoria, precio, descripcion)
+
+Archivos nuevos:
+- registro-artista.php → formulario registro
+- guardar-artista.php  → guarda en BD
+- artistas.php         → lista artistas
+- editar-artista.php   → formulario edición
+- actualizar-artista.php → guarda cambios
+- eliminar-artista.php → elimina registro
+- registro-obra.php    → formulario obra
+- guardar-obra.php     → guarda en BD
+- obras.php            → lista obras
+- editar-obra.php      → formulario edición
+- actualizar-obra.php  → guarda cambios
+- eliminar-obra.php    → elimina registro
+
+# Demo
+Video de demostración: https://youtu.be/qBvk0AdZRPM
+
+# Desarrolladora
+Camila Montaño — SENA ADSO 2025
+
