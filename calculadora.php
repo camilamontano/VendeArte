@@ -8,17 +8,9 @@
     <script src="js/calcular.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-              <li><a href="registro-artista.php">Soy artista</a></li> 
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="artistas.html">Artistas</a></li>
-            <li><a href="obras.html">Obras</a></li>
-            <li><a href="Calculadora.php">Calculadora de precios</a></li> 
-            <li><a href="contacto.php">Contacto</a></li>
-        </ul>
-    </nav>
-
+    
+        <?php include 'nav.php'; ?>
+       
 
 <section class="calculadora">
     <h2>¿Cuánto cobrar por tu trabajo?</h2>
@@ -42,5 +34,6 @@
             <div id="resultado"></div>
         </div>  
 </section>
+<?php include 'footer.php'; ?>
 </body>
 </html>

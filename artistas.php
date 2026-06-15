@@ -12,7 +12,7 @@ $resultado = mysqli_query($conexion, $sql);
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<?php include 'nav.php'; ?>
 <h2>Artistas registrados</h2>
 
   <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
@@ -27,6 +27,6 @@ $resultado = mysqli_query($conexion, $sql);
 <?php } ?>
 
   <?php mysqli_close($conexion); ?>
-
+<?php include 'footer.php'; ?>
 </body>
 </html>

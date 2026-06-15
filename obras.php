@@ -12,7 +12,7 @@ $resultado = mysqli_query($conexion, $sql);
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<?php include 'nav.php'; ?>
 <h2>Obras registradas</h2>
 <div>
       <a href="registro-obra.php">+ Registrar mi obra</a>
@@ -29,6 +29,6 @@ $resultado = mysqli_query($conexion, $sql);
 <?php } ?>
 
   <?php mysqli_close($conexion); ?>
-
+<?php include 'footer.php'; ?>
 </body>
 </html>
