@@ -2,6 +2,8 @@
 $conexion = mysqli_connect("localhost", "root", "", "vendearte");
 $sql = "SELECT * FROM obras LIMIT 4";
 $obras = mysqli_query($conexion, $sql);
+$sql_artistas = "SELECT * FROM artistas LIMIT 4";
+$artistas = mysqli_query($conexion, $sql_artistas);
 ?>
 
 <!DOCTYPE html>
@@ -141,46 +143,42 @@ $obras = mysqli_query($conexion, $sql);
 
 
 
+<section class="artistas-destacados">
+  <div class="seccion-header">
+    <p class="eyebrow">Creadores</p>
+    <h2>Artistas destacados</h2>
+    <p class="seccion-desc">Talento colombiano que transforma el arte en vida</p>
+  </div>
+
+  <div class="artistas-grid">
+    <?php while($artista = mysqli_fetch_assoc($artistas)) { ?>
+      <div class="card-artista">
+        
+        <div class="artista-fondo">
+          <img src="uploads/<?php echo $artista['imagen_fondo']; ?>" alt="obra">
+        </div>
+
+        <div class="artista-info">
+          <img src="uploads/<?php echo $artista['foto']; ?>" class="artista-foto" alt="<?php echo $artista['nombre']; ?>">
+          <h3><?php echo $artista['nombre']; ?></h3>
+          <p><?php echo $artista['especialidad']; ?></p>
+        </div>
+
+        <div class="artista-overlay">
+          <h3><?php echo $artista['nombre']; ?></h3>
+          <p><?php echo $artista['especialidad']; ?></p>
+          <p><?php echo $artista['descripcion']; ?></p>
+          <a href="artistas.php" class="btn-overlay">Ver perfil</a>
+        </div>
+
+      </div>
+    <?php } ?>
+  </div>
+</section>
 
 
 
 
-
-    <section class="artistas">
-    <h2>Artistas Destacados</h2>
-
-    <div class="cards">
-
-    <div class="card">
-        <h3>Camila Montaño</h3>
-        <p>Artista colombiana especializada en pintura abstracta  · Buenaventura </p>
-        <p>desde $85.000</p>
-        <button>Ver perfil</button>
-    </div>
-    
-    <div class="card">
-        <h3>Diego Restrepo</h3>
-        <p>Artista colombiano especializado en escultura  · Cali </p>
-        <p>desde $120.000</p>
-        <button>Ver perfil</button>
-    </div>
-
-    <div class="card">
-        <h3>Calcifer</h3>
-        <p>Artista colombiana especializada en barcos tallados en madera  · Buenaventura </p>
-        <p>desde $150.000</p>
-        <button>Ver perfil</button>
-    </div>
-
-    <div class="card">
-        <h3>Andrea Torres</h3>
-        <p>Tejido Artesanal  · Buenaventura </p>
-        <p>desde $40.000</p>
-        <button>Ver perfil</button>
-    </div>
-
-    </div>
-    </section>
     <script src="js/main.js"></script>
 
 </body>
