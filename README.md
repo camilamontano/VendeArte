@@ -98,9 +98,37 @@ Archivos nuevos:
 - actualizar-obra.php  → guarda cambios
 - eliminar-obra.php    → elimina registro
 
-# Demo
-Video de demostración: https://youtu.be/qBvk0AdZRPM
+##  PMV3 — Funcionalidades implementadas
 
-# Desarrolladora
-Camila Montaño — SENA ADSO 2026
+### Nuevas funcionalidades
+- Registro completo de artistas con foto, imagen de portada, redes sociales, especialidades, información de ventas y términos
+- Subida de imágenes para artistas y obras
+- Galería de obras estilo masonry con efecto overlay
+- Buscador y filtros por especialidad y ciudad en artistas
+- Buscador y filtros por categoría en obras
+- Calculadora de precios con desglose detallado y consejos
+- Diseño responsivo para móvil y tablet
+- Mensajes de éxito y error en todos los formularios
+- Nav y footer reutilizables con include PHP
+- Rediseño completo del frontend — paleta beige/terracota, Playfair Display + Montserrat
+- Collage flotante animado en el hero
+- Sección "Sobre nosotros" con mosaico asimétrico
+- Sección artistas destacados con overlay en index
+- CTA y footer profesional con newsletter, pagos y confianza
+
+### Arquitectura actualizada — PMV3
+Tablas actualizadas:
+- `artistas` — agregadas columnas: foto, imagen_fondo, telefono, instagram, facebook, tiktok, encargos, entrega, precio_min, precio_max
+- `obras` — agregada columna: imagen
+
+Archivos nuevos:
+- nav.php → nav reutilizable
+- footer.php → footer reutilizable
+- uploads/ → carpeta de imágenes
+
+## 🎥 Demo PMV3
+Video de demostración: 
+
+## 👩‍💻 Desarrolladora
+Camila Montaño — SENA · Análisis y Desarrollo de Software · 2026
 
