@@ -126,9 +126,9 @@ Archivos nuevos:
 - footer.php → footer reutilizable
 - uploads/ → carpeta de imágenes
 
-## 🎥 Demo PMV3
-Video de demostración: 
+## Demo PMV3
+Video de demostración: https://youtu.be/E2JF0nzRu7Y
 
-## 👩‍💻 Desarrolladora
+## Desarrolladora
 Camila Montaño — SENA · Análisis y Desarrollo de Software · 2026
 
