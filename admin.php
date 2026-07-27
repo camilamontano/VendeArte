@@ -1,9 +1,16 @@
 <?php
+session_start();
+
+// Si no hay sesión activa o no es admin, lo mandamos al login
+if (!isset($_SESSION['usuario_id']) || $_SESSION['rol'] !== 'admin') {
+    header("Location: login.php");
+    exit;
+}
+
 $conexion = mysqli_connect("localhost", "root", "", "vendearte");
 $sql = "SELECT * FROM contacto";
 $resultado = mysqli_query($conexion, $sql);
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,6 +21,7 @@ $resultado = mysqli_query($conexion, $sql);
 <body>
 
   <h2>Mensajes recibidos</h2>
+  <a href="logout.php">Cerrar sesión</a>
 
   <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
     <div class="mensaje">
