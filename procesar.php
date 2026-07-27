@@ -6,7 +6,7 @@ $mensaje = $_POST['mensaje'];
 $conexion = mysqli_connect("localhost", "root", "", "vendearte");
 
 if (!$conexion) {
-    echo "Error de conexión";
+    header("Location: contacto.php?msg=error");
     exit;
 }
 
@@ -15,9 +15,11 @@ $stmt = mysqli_prepare($conexion, $sql);
 mysqli_stmt_bind_param($stmt, "sss", $nombre, $email, $mensaje);
 
 if (mysqli_stmt_execute($stmt)) {
-    echo "Gracias " . htmlspecialchars($nombre) . ", tu mensaje fue guardado correctamente.";
+    header("Location: contacto.php?msg=exito");
+    exit;
 } else {
-    echo "Error al guardar";
+    header("Location: contacto.php?msg=error");
+    exit;
 }
 
 mysqli_stmt_close($stmt);

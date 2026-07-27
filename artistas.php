@@ -28,6 +28,14 @@ $resultado = mysqli_query($conexion, $sql);
   <div class="alerta alerta-exito">✓ Artista eliminado correctamente</div>
 <?php endif; ?>
 
+<?php if(isset($_GET['msg']) && $_GET['msg'] == 'error'): ?>
+  <div class="alerta alerta-error">✗ Hubo un error al eliminar el artista</div>
+<?php endif; ?>
+
+<?php if(isset($_GET['msg']) && $_GET['msg'] == 'actualizado'): ?>
+  <div class="alerta alerta-exito">✓ Artista actualizado correctamente</div>
+<?php endif; ?>
+
 <section class="buscador">
   <input type="text" id="buscar" placeholder="Buscar artista...">
   <select id="filtro-especialidad">

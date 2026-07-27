@@ -18,12 +18,9 @@ $stmt = mysqli_prepare($conexion, $sql);
 mysqli_stmt_bind_param($stmt, "ssdsi", $titulo, $categoria, $precio, $descripcion, $id);
 
 if (mysqli_stmt_execute($stmt)) {
-    header("Location: obras.php");
+    header("Location: obras.php?msg=actualizado");
     exit;
 } else {
-    echo "Error al actualizar";
+    header("Location: obras.php?msg=error");
+    exit;
 }
-
-mysqli_stmt_close($stmt);
-mysqli_close($conexion);
-?>

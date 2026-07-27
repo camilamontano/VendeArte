@@ -9,9 +9,12 @@
 <body>
 
   <?php include 'nav.php'; ?>
-  
+
   <section class="formulario">
     <h2>Registra tu obra</h2>
+    <?php if(isset($_GET['msg']) && $_GET['msg'] == 'error'): ?>
+  <div class="alerta alerta-error">✗ Hubo un error al guardar la obra. Inténtalo de nuevo.</div>
+<?php endif; ?>
     <p>Comparte tu trabajo con la comunidad.</p>
 
     <form action="guardar-obra.php" method="POST" enctype="multipart/form-data">

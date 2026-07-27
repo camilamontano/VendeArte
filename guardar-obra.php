@@ -2,7 +2,7 @@
 $conexion = mysqli_connect("localhost", "root", "", "vendearte");
 
 if (!$conexion) {
-    echo "Error de conexión";
+    header("Location: registro-obra.php?msg=error");
     exit;
 }
 
@@ -10,7 +10,6 @@ $titulo = $_POST['titulo'];
 $categoria = $_POST['categoria'];
 $precio = $_POST['precio'];
 $descripcion = $_POST['descripcion'];
-
 
 $imagen = '';
 if (!empty($_FILES['imagen']['name'])) {
@@ -23,10 +22,11 @@ $stmt = mysqli_prepare($conexion, $sql);
 mysqli_stmt_bind_param($stmt, "ssdss", $titulo, $categoria, $precio, $descripcion, $imagen);
 
 if (mysqli_stmt_execute($stmt)) {
-    header("Location: obras.php");
+    header("Location: obras.php?msg=creado");
     exit;
 } else {
-    echo "Error al guardar";
+    header("Location: registro-obra.php?msg=error");
+    exit;
 }
 
 mysqli_stmt_close($stmt);

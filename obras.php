@@ -28,6 +28,17 @@ $resultado = mysqli_query($conexion, $sql);
   <div class="alerta alerta-exito">✓ Obra eliminada correctamente</div>
 <?php endif; ?>
 
+<?php if(isset($_GET['msg']) && $_GET['msg'] == 'creado'): ?>
+  <div class="alerta alerta-exito">✓ Obra publicada correctamente</div>
+<?php endif; ?>
+<?php if(isset($_GET['msg']) && $_GET['msg'] == 'error'): ?>
+  <div class="alerta alerta-error">✗ Hubo un error al eliminar la obra</div>
+<?php endif; ?>
+
+<?php if(isset($_GET['msg']) && $_GET['msg'] == 'actualizado'): ?>
+  <div class="alerta alerta-exito">✓ Obra actualizada correctamente</div>
+<?php endif; ?>
+
 <!-- Buscador -->
 <section class="buscador">
   <input type="text" id="buscar-obra" placeholder="Buscar obra...">
