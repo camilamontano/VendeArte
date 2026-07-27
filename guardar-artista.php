@@ -34,9 +34,18 @@ if (!empty($_FILES['imagen_fondo']['name'])) {
 }
 
 $sql = "INSERT INTO artistas (nombre, especialidad, ciudad, correo, descripcion, foto, imagen_fondo, telefono, instagram, facebook, tiktok, encargos, entrega, precio_min, precio_max) 
-        VALUES ('$nombre', '$especialidad', '$ciudad', '$correo', '$descripcion', '$foto', '$imagen_fondo', '$telefono', '$instagram', '$facebook', '$tiktok', '$encargos', '$entrega', '$precio_min', '$precio_max')";
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-if (mysqli_query($conexion, $sql)) {
+$stmt = mysqli_prepare($conexion, $sql);
+mysqli_stmt_bind_param(
+    $stmt,
+    "sssssssssssssdd",
+    $nombre, $especialidad, $ciudad, $correo, $descripcion,
+    $foto, $imagen_fondo, $telefono, $instagram, $facebook,
+    $tiktok, $encargos, $entrega, $precio_min, $precio_max
+);
+
+if (mysqli_stmt_execute($stmt)) {
     header("Location: registro-artista.php?msg=exito");
     exit;
 } else {
@@ -44,5 +53,6 @@ if (mysqli_query($conexion, $sql)) {
     exit;
 }
 
+mysqli_stmt_close($stmt);
 mysqli_close($conexion);
 ?>
